@@ -20,6 +20,11 @@ export default {
       title: 'Description',
       type: 'string',
     },
+    {
+      name: 'challenges',
+      title: 'Challenges',
+      type: 'string',
+    },
     defineField({
       title: 'Tags',
       name: 'tags',

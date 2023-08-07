@@ -1,20 +1,11 @@
+<script>
+	import Logo from '../../shared/components/Logo.svelte';
+	import Socials from '../../shared/components/Socials.svelte';
+	import NavLinks from '../../shared/components/NavLinks.svelte';
+</script>
+
 <nav>
-	<!-- social links -->
-	<div>
-		<a href="#">GH</a>
-		<a href="#">IN</a>
-	</div>
-
-	<!-- logo -->
-	<div>
-		<p>ZM</p>
-	</div>
-
-	<!-- nav items -->
-	<div>
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/experience">Experience</a></li>
-		</ul>
-	</div>
+	<Socials />
+	<Logo />
+	<NavLinks />
 </nav>

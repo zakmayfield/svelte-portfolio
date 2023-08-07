@@ -26,6 +26,16 @@ export default {
       type: 'string',
     },
     defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      validation: (Rule) => Rule.required(),
+      options: {
+        source: 'company',
+        maxLength: 96,
+      },
+    }),
+    defineField({
       title: 'Tags',
       name: 'tags',
       type: 'array',

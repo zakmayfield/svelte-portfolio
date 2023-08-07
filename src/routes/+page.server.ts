@@ -20,6 +20,6 @@ export async function load() {
 	}
 
 	return {
-		experience: data
+		allExperience: data
 	};
 }

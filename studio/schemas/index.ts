@@ -1,2 +1,4 @@
 import pet from './pet'
-export const schemaTypes = [pet]
+import experience from './experience'
+
+export const schemaTypes = [pet, experience]

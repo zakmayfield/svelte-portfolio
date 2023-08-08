@@ -3,6 +3,6 @@
 	export let classes = '';
 </script>
 
-<div class={`${merge('border mx-auto max-w-7xl', classes)}`}>
+<div class={`${merge('mx-auto max-w-7xl', classes)}`}>
 	<slot />
 </div>

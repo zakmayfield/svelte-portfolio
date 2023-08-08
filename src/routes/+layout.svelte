@@ -5,7 +5,5 @@
 </script>
 
 <Nav />
-<div>
-	<slot />
-</div>
+<slot />
 <Footer />

@@ -6,7 +6,7 @@
 </script>
 
 <nav class="">
-	<Container classes="max-w-xs  flex justify-between items-center">
+	<Container classes="flex justify-between items-center">
 		<Socials />
 		<Logo />
 		<NavLinks />

@@ -1,3 +1,3 @@
 <div>
-	<p>ZM</p>
+	<p class="font-bungee">ZM</p>
 </div>

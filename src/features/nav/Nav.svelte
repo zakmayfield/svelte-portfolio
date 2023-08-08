@@ -4,7 +4,7 @@
 	import NavLinks from '../../shared/components/NavLinks.svelte';
 </script>
 
-<nav>
+<nav class="flex justify-between items-center">
 	<Socials />
 	<Logo />
 	<NavLinks />

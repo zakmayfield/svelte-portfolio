@@ -21,8 +21,8 @@
 		alt="Cover image for {exp.company}"
 	/>
 
-	<h2 class="mt-2 font-semibold">{exp.company}</h2>
-	<p class="text-sm mt-2 mb-6">{exp.workTitle}</p>
+	<h2 class="mt-4">{exp.company}</h2>
+	<p class="text-sm font-light mt-2 mb-6">{exp.workTitle}</p>
 
 	<ul class="flex flex-wrap gap-2 gap-y-1 text-xs">
 		{#each exp.tags as tag}

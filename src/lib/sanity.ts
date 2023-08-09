@@ -1,4 +1,5 @@
 import { createClient } from '@sanity/client';
+import type { ImageAsset, Slug } from '@sanity/types';
 
 import { PUBLIC_SANITY_PROJECT_ID, PUBLIC_SANITY_DATASET } from '$env/static/public';
 
@@ -12,3 +13,15 @@ export const client = createClient({
 	apiVersion: '2023-08-04',
 	useCdn: false
 });
+
+export interface Experience {
+	_type: 'experience';
+	_id: string;
+	slug: Slug;
+	company: string;
+	workTitle: string;
+	tags: string;
+	description: string;
+	challenges: string;
+	image: ImageAsset;
+}

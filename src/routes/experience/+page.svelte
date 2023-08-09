@@ -7,7 +7,7 @@
 </script>
 
 <Container classes="max-w-3xl">
-	<h1>Experience</h1>
+	<h1 class="font-semibold text-lg mb-6">Experience</h1>
 
 	<CardLayout>
 		{#if data.experience.length}

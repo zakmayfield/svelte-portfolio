@@ -2,7 +2,7 @@ import { client } from '$lib/sanity';
 import { error } from '@sveltejs/kit';
 
 export async function load() {
-	const data = await client.fetch(`
+	const experience = await client.fetch(`
 		*[_type == 'experience']{
 			_id,
 			slug,
@@ -15,11 +15,11 @@ export async function load() {
 		}
 	`);
 
-	if (!data) {
+	if (!experience) {
 		throw error(404);
 	}
 
 	return {
-		allExperience: data
+		experience
 	};
 }

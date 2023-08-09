@@ -25,6 +25,11 @@ export default {
       title: 'Challenges',
       type: 'string',
     },
+    {
+      name: 'url',
+      title: 'URL',
+      type: 'string',
+    },
     defineField({
       name: 'slug',
       title: 'Slug',

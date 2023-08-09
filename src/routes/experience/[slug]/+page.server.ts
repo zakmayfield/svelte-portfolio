@@ -13,8 +13,9 @@ export async function load({ params }) {
       workTitle,
       tags,
       description,
-        challenges,
-        image
+      challenges,
+      image,
+      url
       }
     `,
 		{ slug }

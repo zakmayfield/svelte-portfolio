@@ -4,7 +4,7 @@
 	export let exp: Experience;
 
 	function handleNavigate() {
-		navigate(`/${exp.slug.current}`);
+		navigate(`/experience/${exp.slug.current}`);
 	}
 </script>
 

@@ -1,16 +1,40 @@
 <script>
+	import { IconExternalLink } from '@tabler/icons-svelte';
+	import { urlFor } from '$lib/utils';
+	import Container from '../../../shared/components/Container.svelte';
+
 	export let data;
 	const exp = data.experience;
 </script>
 
-{#if exp}
-	<h1>{exp.company}</h1>
-	<h2>{exp.workTitle}</h2>
+<Container classes="max-w-3xl border">
+	{#if exp}
+		<div class="flex items-center gap-6">
+			<h1 class="font-semibold text-lg">{exp.company}</h1>
+			<a rel="external" target="_blank" href={exp.url}>
+				<IconExternalLink size={24} />
+			</a>
+		</div>
+		<h2 class="mb-6 font-light">{exp.workTitle}</h2>
 
-	{#each exp.tags as tag}
-		<li>{tag}</li>
-	{/each}
+		<div class="grid grid-cols-3 gap-6">
+			<img
+				src={urlFor(exp.image).width(500).height(300).url()}
+				alt="Cover image for {exp.company}"
+				class="col-span-2 rounded-md"
+			/>
 
-	<p>{exp.description}</p>
-	<p>{exp.challenges}</p>
-{/if}
+			<div>
+				<h4 class="text-center text-lg font-light">Stack</h4>
+				<ul class="col-span-1 shadow-md rounded-md p-6 flex flex-col gap-4">
+					{#each exp.tags as tag}
+						<li>{tag}</li>
+					{/each}
+				</ul>
+			</div>
+		</div>
+
+		<p>{exp.description}</p>
+		<p>{exp.challenges}</p>
+	{/if}
+</Container>

@@ -24,4 +24,5 @@ export interface Experience {
 	description: string;
 	challenges: string;
 	image: ImageAsset;
+	url: string;
 }

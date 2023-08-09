@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { navigate } from '$lib/utils';
+	import { navigate, urlFor } from '$lib/utils';
 	import type { Experience } from '$lib/sanity';
 	export let exp: Experience;
 
@@ -15,6 +15,11 @@
 	role="link"
 	class="cursor-pointer"
 >
+	<img
+		class=""
+		src={urlFor(exp.image).width(500).height(300).url()}
+		alt="Cover image for {exp.company}"
+	/>
 	<h2>{exp.company}</h2>
 
 	<p>{exp.workTitle}</p>
@@ -23,10 +28,4 @@
 			<li>{tag}</li>
 		{/each}
 	</ul>
-
-	<h3>Description</h3>
-	<p>{exp.description}</p>
-
-	<h3>Challenges</h3>
-	<p>{exp.challenges}</p>
 </div>

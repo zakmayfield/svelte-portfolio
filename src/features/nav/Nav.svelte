@@ -5,8 +5,8 @@
 	import Container from '../../shared/components/Container.svelte';
 </script>
 
-<nav class="">
-	<Container classes="flex justify-between items-center">
+<nav>
+	<Container classes="flex justify-between items-center py-6">
 		<Socials />
 		<Logo />
 		<NavLinks />

@@ -26,3 +26,8 @@ export interface Experience {
 	image: ImageAsset;
 	url: string;
 }
+
+export type RecentWorkSumary = Omit<
+	Experience,
+	'workTitle' | 'tags' | 'description' | 'challenges' | 'url'
+>;

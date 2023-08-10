@@ -7,7 +7,7 @@
 	const exp = data.experience;
 </script>
 
-<Container classes="max-w-3xl border">
+<Container classes="max-w-3xl">
 	{#if exp}
 		<div class="flex items-center gap-6">
 			<h1 class="font-semibold text-lg">{exp.company}</h1>
@@ -17,24 +17,31 @@
 		</div>
 		<h2 class="mb-6 font-light">{exp.workTitle}</h2>
 
-		<div class="grid grid-cols-3 gap-6">
+		<div class="grid grid-cols-3 gap-6 mb-6">
 			<img
 				src={urlFor(exp.image).width(500).height(300).url()}
 				alt="Cover image for {exp.company}"
 				class="col-span-2 rounded-md"
 			/>
 
-			<div>
-				<h4 class="text-center text-lg font-light">Stack</h4>
-				<ul class="col-span-1 shadow-md rounded-md p-6 flex flex-col gap-4">
+			<div class="col-span-1">
+				<h3 class="text-lg font-semibold mb-2">Stack</h3>
+				<ul class=" flex flex-col gap-2 font-light">
 					{#each exp.tags as tag}
-						<li>{tag}</li>
+						<li class="border-2 border-slate-300 bg-slate-100 rounded-md p-2">{tag}</li>
 					{/each}
 				</ul>
 			</div>
 		</div>
 
-		<p>{exp.description}</p>
-		<p>{exp.challenges}</p>
+		<div class="mb-6">
+			<h4 class="mb-3 font-semibold">Description</h4>
+			<p class="tracking-wide">{exp.description}</p>
+		</div>
+
+		<div>
+			<h4 class="mb-3 font-semibold">Challenges</h4>
+			<p class="tracking-wide">{exp.challenges}</p>
+		</div>
 	{/if}
 </Container>

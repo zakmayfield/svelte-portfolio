@@ -18,7 +18,7 @@
 	<Container classes="max-w-2xl p-0">
 		<h3 class="text-xl mb-6">Thanks for stopping by</h3>
 
-		<Container classes="max-w-lg p-0 flex flex-col gap-6">
+		<Container classes="max-w-xl p-0 flex flex-col gap-6">
 			<p>
 				My name is Zachary, I am a US/Canada based front end TypeScript developer, with a knowledge
 				of Node.js backend architecture. I love building with the latest tech and Im constantly

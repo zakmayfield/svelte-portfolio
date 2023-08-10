@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { RecentWorkSummary } from '$lib/sanity';
+	import { urlFor } from '$lib/utils';
 	import Container from '../shared/components/Container.svelte';
 	export let data: { recentWork: RecentWorkSummary[] };
 
@@ -36,16 +37,28 @@
 
 <!-- recent projects -->
 <section>
-	{#if data.recentWork}
-		{#each data.recentWork as x}
-			<div
-				role="button"
-				on:click={() => handleClick(x)}
-				on:keypress={() => handleClick(x)}
-				tabindex="0"
-			>
-				{x.company}
-			</div>
-		{/each}
-	{/if}
+	<Container classes="max-w-3xl grid grid-cols-2 justify-items-center">
+		{#if data.recentWork}
+			{#each data.recentWork as x}
+				<div
+					role="button"
+					on:click={() => handleClick(x)}
+					on:keypress={() => handleClick(x)}
+					tabindex="0"
+					class="relative flex justify-center items-center cursor-pointer shadow-md rounded-lg overflow-hidden w-[300px]"
+				>
+					<img
+						src={urlFor(x.image).width(300).height(150).url()}
+						alt="Cover image for {x.company}"
+						class="object-cover h-full object-center"
+					/>
+					<div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70">
+						<h4 class="text-white tracking-wide font-thin">
+							{x.company}
+						</h4>
+					</div>
+				</div>
+			{/each}
+		{/if}
+	</Container>
 </section>

@@ -1,5 +1,11 @@
-<script>
+<script lang="ts">
+	import type { RecentWorkSummary } from '$lib/sanity';
 	import Container from '../shared/components/Container.svelte';
+	export let data: { recentWork: RecentWorkSummary[] };
+
+	function handleClick(x: RecentWorkSummary) {
+		console.log(x);
+	}
 </script>
 
 <!-- hero -->
@@ -29,3 +35,17 @@
 </section>
 
 <!-- recent projects -->
+<section>
+	{#if data.recentWork}
+		{#each data.recentWork as x}
+			<div
+				role="button"
+				on:click={() => handleClick(x)}
+				on:keypress={() => handleClick(x)}
+				tabindex="0"
+			>
+				{x.company}
+			</div>
+		{/each}
+	{/if}
+</section>

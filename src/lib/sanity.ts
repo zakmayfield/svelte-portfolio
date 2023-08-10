@@ -27,7 +27,7 @@ export interface Experience {
 	url: string;
 }
 
-export type RecentWorkSumary = Omit<
+export type RecentWorkSummary = Omit<
 	Experience,
 	'workTitle' | 'tags' | 'description' | 'challenges' | 'url'
 >;

@@ -11,8 +11,6 @@ export async function load() {
 		}
 	`);
 
-	console.log(recentWork);
-
 	if (!recentWork) {
 		throw error(404);
 	}

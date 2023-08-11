@@ -1,11 +1,11 @@
 <script lang="ts">
 	import type { RecentWorkSummary } from '$lib/sanity';
-	import { urlFor } from '$lib/utils';
+	import { urlFor, navigate } from '$lib/utils';
 	import Container from '../shared/components/Container.svelte';
 	export let data: { recentWork: RecentWorkSummary[] };
 
-	function handleClick(x: RecentWorkSummary) {
-		console.log(x);
+	function handleNavigate(route: string) {
+		navigate(`/experience/${route}`);
 	}
 </script>
 
@@ -44,8 +44,8 @@
 				{#each data.recentWork as x}
 					<div
 						role="button"
-						on:click={() => handleClick(x)}
-						on:keypress={() => handleClick(x)}
+						on:click={() => handleNavigate(x.slug.current)}
+						on:keypress={() => handleNavigate(x.slug.current)}
 						tabindex="0"
 						class="relative flex justify-center items-center cursor-pointer shadow-md rounded-lg overflow-hidden w-[300px]"
 					>

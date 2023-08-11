@@ -5,7 +5,7 @@
 	import Container from '../../shared/components/Container.svelte';
 </script>
 
-<footer>
+<footer class="py-6">
 	<Container classes="flex justify-between items-center">
 		<Logo />
 		<Socials />
